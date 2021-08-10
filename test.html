@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Test YouTube</title>
+    <style>
+        *{
+            padding: 0; margin: 0;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-size: 62.5%;
+        }
+
+        header{
+            display: flex;
+            background-color: lightblue;
+            height: 56px;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+        }
+
+        header .box{
+            border: 1px solid grey;
+            display: flex;
+            align-items: center;
+        }
+
+        header .left{
+            flex: 0 0 150px;
+        }
+
+        header .middle{
+            flex: 0 1 600px;
+        }
+
+        header .right{
+            flex: 0 1 250px;
+        }
+
+        header .middle .app-list{
+            position: absolute;
+            background-color: honeydew;
+            top: 100%;
+            transform: scaleY(0);
+            transform-origin: top;
+        }
+
+        header .middle .app-list .app-list-box a{
+            display: block;
+        }
+
+        header .middle #youtuble-apps:checked ~ .app-list{
+            transform: scaleY(1 )
+        }
+
+        .content{
+            width: 100%;
+        }
+
+        .content .container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.6rem;
+            padding: 0 .8rem;
+            margin: 2.4rem 1.6rem 0 1.6rem;
+        }
+
+        .content .container .container-sub{
+            flex: 1 1 30rem;
+        }
+
+        .content .container .container-sub .vid{
+            width: 100%;
+            position: relative;
+        }
+
+        .content .container .container-sub .vid video{
+            width: 100%;
+        }
+
+        .content .container .container-sub .vid span{
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            right: 0;
+            padding: 0 .4rem; margin: .8rem;
+            font-size: 1.4rem;
+            color: #fff;
+            background-color: #333;
+            border-radius: .3rem;
+        }
+ 
+        .content .container .container-sub .vid-info{
+            display: flex;
+        }
+
+        .content .container .container-sub .vid-info img{
+            width: 3.6rem; height: 3.6rem;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .content .container .container-sub .vid-info .vid-info-sub{
+            display: flex;
+            flex-direction: column;
+            padding-right: 2.4rem;
+        }
+
+        .content .container .container-sub .vid-info .vid-info-sub h3{
+            font-size: 1.4rem;
+            font-weight: bold;
+            width: 100%;
+            color: #333;
+            height: 4rem;
+            line-height: 1.5;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="box left">
+        left
+    </div>
+    <div class="box middle">
+        <input type="radio" name="" id="youtube-apps">
+        <input type="radio" name="" id="settings">
+        <label for="youtube-apps">
+            <i class="material-icons">apps</i>
+        </label>
+
+        <nav class="app-list">
+            <div class="app-list-box">
+                <a href="#"><i class="material-icons">smart_display</i>YouTube TV</a>
+            </div>
+            <div class="app-list-box">
+                <a href="#"><i class="material-icons">smart_display</i>YouTube Music</a>
+                <a href="#"><i class="material-icons">smart_display</i>YouTube Kids</a>
+            </div>
+            <div class="app-list-box">
+                <a href="#"><i class="material-icons">smart_display</i>Creator Academy</a>
+                <a href="#"><i class="material-icons">smart_display</i>YouTube for Artists</a>
+            </div>
+        </nav>
+    </div>
+    <div class="box right">Right</div>
+</header>
+
+<section class="content">
+    <div class="container top">
+        <div class="container-sub">
+            <div class="vid">
+                <video>
+                    <source src="images/vid.mp4" type="video/mp4">
+                </video>
+                <span>2:40</span>
+            </div>
+
+            <div class="vid-info">
+                <img src="images/ava1.jpg" alt="">
+                <div class="vid-info-sub">
+                    <h3>Ad repellat voluptates accusamus enim ut odit aliquam nesciunt eaque nulla dignissimos</h3>
+                    <div class="user">
+                        <span class="name">
+                            Accusamus Enim Ut
+                            <i class="material-icons tick">check_circle</i>
+                            <i class="material-icons alt small">lens</i>
+                        </span>
+                        <span class="view">
+                            10M views
+                            <i class="material-icons small">lens</i>
+                        </span>
+                        <span class="time">3 months ago</span>
+                    </div>
+                </div>
+                <span class="more-info"><i class="material-icons">more_vert</i></span>
+            </div>
+        </div>
+        <div class="container-sub">
+            <div class="vid">
+                <video>
+                    <source src="images/vid.mp4" type="video/mp4">
+                </video>
+                <span>2:40</span>
+            </div>
+
+            <div class="vid-info">
+                <img src="images/ava1.jpg" alt="">
+                <div class="vid-info-sub">
+                    <h3>Ad repellat voluptates accusamus enim ut odit aliquam nesciunt eaque nulla dignissimos</h3>
+                    <div class="user">
+                        <span class="name">
+                            Accusamus Enim Ut
+                            <i class="material-icons tick">check_circle</i>
+                            <i class="material-icons alt small">lens</i>
+                        </span>
+                        <span class="view">
+                            10M views
+                            <i class="material-icons small">lens</i>
+                        </span>
+                        <span class="time">3 months ago</span>
+                    </div>
+                </div>
+                <span class="more-info"><i class="material-icons">more_vert</i></span>
+            </div>
+        </div>
+        <div class="container-sub">
+            <div class="vid">
+                <video>
+                    <source src="images/vid.mp4" type="video/mp4">
+                </video>
+                <span>2:40</span>
+            </div>
+
+            <div class="vid-info">
+                <img src="images/ava1.jpg" alt="">
+                <div class="vid-info-sub">
+                    <h3>Ad repellat voluptates accusamus enim ut odit aliquam nesciunt eaque nulla dignissimos</h3>
+                    <div class="user">
+                        <span class="name">
+                            Accusamus Enim Ut
+                            <i class="material-icons tick">check_circle</i>
+                            <i class="material-icons alt small">lens</i>
+                        </span>
+                        <span class="view">
+                            10M views
+                            <i class="material-icons small">lens</i>
+                        </span>
+                        <span class="time">3 months ago</span>
+                    </div>
+                </div>
+                <span class="more-info"><i class="material-icons">more_vert</i></span>
+            </div>
+        </div>
+        <div class="container-sub">
+            <div class="vid">
+                <video>
+                    <source src="images/vid.mp4" type="video/mp4">
+                </video>
+                <span>2:40</span>
+            </div>
+
+            <div class="vid-info">
+                <img src="images/ava1.jpg" alt="">
+                <div class="vid-info-sub">
+                    <h3>Ad repellat voluptates accusamus enim ut odit aliquam nesciunt eaque nulla dignissimos</h3>
+                    <div class="user">
+                        <span class="name">
+                            Accusamus Enim Ut
+                            <i class="material-icons tick">check_circle</i>
+                            <i class="material-icons alt small">lens</i>
+                        </span>
+                        <span class="view">
+                            10M views
+                            <i class="material-icons small">lens</i>
+                        </span>
+                        <span class="time">3 months ago</span>
+                    </div>
+                </div>
+                <span class="more-info"><i class="material-icons">more_vert</i></span>
+            </div>
+        </div>
+        <div class="container-sub">
+            <div class="vid">
+                <video>
+                    <source src="images/vid.mp4" type="video/mp4">
+                </video>
+                <span>2:40</span>
+            </div>
+
+            <div class="vid-info">
+                <img src="images/ava1.jpg" alt="">
+                <div class="vid-info-sub">
+                    <h3>Ad repellat voluptates accusamus enim ut odit aliquam nesciunt eaque nulla dignissimos</h3>
+                    <div class="user">
+                        <span class="name">
+                            Accusamus Enim Ut
+                            <i class="material-icons tick">check_circle</i>
+                            <i class="material-icons alt small">lens</i>
+                        </span>
+                        <span class="view">
+                            10M views
+                            <i class="material-icons small">lens</i>
+                        </span>
+                        <span class="time">3 months ago</span>
+                    </div>
+                </div>
+                <span class="more-info"><i class="material-icons">more_vert</i></span>
+            </div>
+        </div>
+        <div class="container-sub">
+            <div class="vid">
+                <video>
+                    <source src="images/vid.mp4" type="video/mp4">
+                </video>
+                <span>2:40</span>
+            </div>
+
+            <div class="vid-info">
+                <img src="images/ava1.jpg" alt="">
+                <div class="vid-info-sub">
+                    <h3>Ad repellat voluptates accusamus enim ut odit aliquam nesciunt eaque nulla dignissimos</h3>
+                    <div class="user">
+                        <span class="name">
+                            Accusamus Enim Ut
+                            <i class="material-icons tick">check_circle</i>
+                            <i class="material-icons alt small">lens</i>
+                        </span>
+                        <span class="view">
+                            10M views
+                            <i class="material-icons small">lens</i>
+                        </span>
+                        <span class="time">3 months ago</span>
+                    </div>
+                </div>
+                <span class="more-info"><i class="material-icons">more_vert</i></span>
+            </div>
+        </div>
+        <div class="container-sub">
+            <div class="vid">
+                <video>
+                    <source src="images/vid.mp4" type="video/mp4">
+                </video>
+                <span>2:40</span>
+            </div>
+
+            <div class="vid-info">
+                <img src="images/ava1.jpg" alt="">
+                <div class="vid-info-sub">
+                    <h3>Ad repellat voluptates accusamus enim ut odit aliquam nesciunt eaque nulla dignissimos</h3>
+                    <div class="user">
+                        <span class="name">
+                            Accusamus Enim Ut
+                            <i class="material-icons tick">check_circle</i>
+                            <i class="material-icons alt small">lens</i>
+                        </span>
+                        <span class="view">
+                            10M views
+                            <i class="material-icons small">lens</i>
+                        </span>
+                        <span class="time">3 months ago</span>
+                    </div>
+                </div>
+                <span class="more-info"><i class="material-icons">more_vert</i></span>
+            </div>
+        </div>
+
+    </div>
+</section>
+    
+</body>
+</html>
