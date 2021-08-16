@@ -13,8 +13,8 @@ html{
 }
 
 body{
-    width: 100vw;
     overflow-y: auto;
+    width: 100vw;
 }
 
 body::-webkit-scrollbar{
@@ -834,9 +834,9 @@ header .header-b .next:active i{
 .content .container .container-unit .container-sub .vid-info .vid-info-sub h3{
     font-size: 1.4rem;
     height: 4rem;
+    overflow: hidden;
     line-height: 1.5;
     color: #333;
-    overflow: hidden;
     text-overflow: ellipsis; /* pending: only works with specific width */
 }
 
